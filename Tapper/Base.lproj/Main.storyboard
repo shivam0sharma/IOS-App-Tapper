@@ -49,7 +49,7 @@
                                     <action selector="onTapButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vwo-hD-wlk"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="WCB-UE-oCZ">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="WCB-UE-oCZ">
                                 <rect key="frame" x="62" y="373" width="250" height="91"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="O0u-w4-dNX"/>

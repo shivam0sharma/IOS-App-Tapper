@@ -9,14 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    // Properties
+    var requiredNumberOfTaps = 0
+    var currentTapCount = 0
+    
+    // Outlets
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var tapsTextField: UITextField!
     @IBOutlet weak var playButton: UIButton!
     
     @IBOutlet weak var tapButton: UIButton!
     @IBOutlet weak var tapsLabel: UILabel!
-    
-    var numberOfTaps = 0
     
     @IBAction func onPlayButtonPressed(_ sender: UIButton!) {
         if (tapsTextField.hasText) {
@@ -27,18 +30,17 @@ class ViewController: UIViewController {
             tapButton.isHidden = false
             tapsLabel.isHidden = false
             
-            numberOfTaps = Int(tapsTextField.text!)!
-            tapsLabel.text = String(numberOfTaps) + " Taps"
+            requiredNumberOfTaps = Int(tapsTextField.text!)!
             tapsTextField.resignFirstResponder()
         }
         
     }
     
     @IBAction func onTapButtonPressed(_ sender: UIButton!) {
-        if !isGameOver() {
-            numberOfTaps -= 1
-            tapsLabel.text = String(numberOfTaps) + " Taps"
-        } else {
+        currentTapCount += 1
+        tapsLabel.text = String(currentTapCount) + " Taps"
+        
+        if isGameOver() {
             restartGame()
         }
     }
@@ -50,10 +52,15 @@ class ViewController: UIViewController {
         
         tapButton.isHidden = true
         tapsLabel.isHidden = true
+        
+        tapsLabel.text = "0 Taps"
+        
+        requiredNumberOfTaps = 0
+        currentTapCount = 0
     }
     
     func isGameOver() -> Bool {
-        if numberOfTaps <= 0 {
+        if currentTapCount == requiredNumberOfTaps {
             return true
         } else {
             return false
