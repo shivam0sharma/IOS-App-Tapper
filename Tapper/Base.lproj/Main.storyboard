@@ -45,6 +45,9 @@
                                     <constraint firstAttribute="height" constant="200" id="muJ-Eg-mag"/>
                                 </constraints>
                                 <state key="normal" image="coin"/>
+                                <connections>
+                                    <action selector="onTapButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vwo-hD-wlk"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="WCB-UE-oCZ">
                                 <rect key="frame" x="62" y="373" width="250" height="91"/>
@@ -64,6 +67,9 @@
                                     <constraint firstAttribute="width" constant="245" id="ZUs-WU-IeI"/>
                                 </constraints>
                                 <state key="normal" image="playbtn"/>
+                                <connections>
+                                    <action selector="onPlayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FUy-1a-deK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,6 +91,13 @@
                             <constraint firstItem="PNa-bo-2aC" firstAttribute="top" secondItem="gpm-8l-k6T" secondAttribute="bottom" constant="27" id="wQa-uc-peh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logoImage" destination="beS-oF-B6Y" id="bW3-lU-nDV"/>
+                        <outlet property="playButton" destination="PNa-bo-2aC" id="Vrx-JU-LU2"/>
+                        <outlet property="tapButton" destination="eZa-2d-eu8" id="SG3-E6-p3y"/>
+                        <outlet property="tapsLabel" destination="WCB-UE-oCZ" id="361-fk-JXx"/>
+                        <outlet property="tapsTextField" destination="gpm-8l-k6T" id="wIg-sH-4vc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
